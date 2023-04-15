@@ -29,11 +29,11 @@ function minesweeper(matrix) {
 		const arr = [];
 		for (let j = 0; j < matrix[i].length; j++) {
 			let count = 0;
+			if (matrix[i][j - 1]) count += 1;
+			if (matrix[i][j + 1]) count += 1;
 			if (matrix[i - 1]?.[j - 1]) count += 1;
 			if (matrix[i - 1]?.[j]) count += 1;
 			if (matrix[i - 1]?.[j + 1]) count += 1;
-			if (matrix[i]?.[j - 1]) count += 1;
-			if (matrix[i]?.[j + 1]) count += 1;
 			if (matrix[i + 1]?.[j - 1]) count += 1;
 			if (matrix[i + 1]?.[j]) count += 1;
 			if (matrix[i + 1]?.[j + 1]) count += 1;
